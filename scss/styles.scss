@@ -19,10 +19,10 @@ $text-presets: (
     font: 500 14px/150% "Figtree",
     letter-spacing: 0px,
   ),
-  4: (
-    font: 800 14px/150% "Figtree",
-    letter-spacing: 0px,
-  ),
+  3-bold: (
+      font: 800 14px/150% "Figtree",
+      letter-spacing: 0px,
+    ),
 );
 
 $spacing: (
@@ -53,8 +53,7 @@ body {
   border-radius: 20px;
   background-color: white;
   padding: map.get($spacing, 300);
-  width: 384px;
-  height: 522px;
+  width: 386px;
 
   &__image {
     border-radius: 10px;
@@ -73,16 +72,20 @@ body {
   &__content {
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: map.get($spacing, 150);
 
     & > .card__tag {
       border-radius: 4px;
       background-color: map.get($colors, yellow);
-      padding: map.get($spacing, 50) map.get($spacing, 150);
+      padding-top: map.get($spacing, 50);
+      padding-right: map.get($spacing, 150);
+      padding-bottom: map.get($spacing, 50);
+      padding-left: map.get($spacing, 150);
       width: 82px;
       color: map.get($colors, gray-950);
-      font: map.get(map.get($text-presets, 4), font);
-      letter-spacing: map.get(map.get($text-presets, 4), letter-spacing);
+      font: map.get(map.get($text-presets, 3-bold), font);
+      letter-spacing: map.get(map.get($text-presets, 3-bold), letter-spacing);
     }
 
     & > .card__date {
@@ -125,8 +128,8 @@ body {
 
     &-name {
       color: map.get($colors, gray-950);
-      font: map.get(map.get($text-presets, 4), font);
-      letter-spacing: map.get(map.get($text-presets, 4), letter-spacing);
+      font: map.get(map.get($text-presets, 3-bold), font);
+      letter-spacing: map.get(map.get($text-presets, 3-bold), letter-spacing);
     }
   }
 }

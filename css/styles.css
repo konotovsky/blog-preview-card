@@ -20,7 +20,6 @@ body {
   background-color: white;
   padding: 24px;
   width: 386px;
-  height: 524px;
 }
 .card__image {
   border-radius: 10px;
@@ -37,12 +36,16 @@ body {
 .card__content {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 12px;
 }
 .card__content > .card__tag {
   border-radius: 4px;
   background-color: #f4d04e;
-  padding: 4px 12px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  padding-left: 12px;
   width: 82px;
   color: #111111;
   font: 800 14px/150% "Figtree";
